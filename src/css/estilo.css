@@ -1,0 +1,216 @@
+:root { /* Define as variáveis globais do tema padrão */
+    --fontColor1: #333333; /* Cor principal de texto */
+    --fontColor2: #666666; /* Cor secundária de texto */
+    --menuColor: #ffe600; /* Cor de fundo do menu */
+    --bgGradient: linear-gradient(to right, #f0f0f0, #ffe600, #f0f0f0); /* Gradiente do fundo padrão */
+    --cardBg: #ffffff; /* Cor de fundo dos cards */
+    --cardBorder: #e6e6e6; /* Cor da borda dos cards */
+    --btnBg: #f3f0f0; /* Cor de fundo dos botões */
+    --btnColor: #0071dc; /* Cor do texto dos botões */
+}
+
+.light-theme { /* Define as variáveis para o tema alternativo */
+    --fontColor1: #fdf0d5; /* Texto principal claro */
+    --fontColor2: #8ecae6; /* Texto secundário claro */
+    --menuColor: #003049; /* Menu escuro */
+    --bgGradient: linear-gradient(to right, #023047, #219ebc, #023047); /* Gradiente alternativo */
+    --cardBg: #073b4c; /* Fundo dos cards no tema escuro */
+    --cardBorder: #1d3557; /* Borda dos cards no tema escuro */
+    --btnBg: #1d3557; /* Fundo dos botões no tema escuro */
+    --btnColor: #fdf0d5; /* Cor do texto dos botões no tema escuro */
+}
+
+* { /* Seleciona todos os elementos da página */
+    margin: 0; /* Remove a margem padrão */
+    padding: 0; /* Remove o espaçamento interno padrão */
+    box-sizing: border-box; /* Inclui borda e padding no cálculo do tamanho */
+}
+
+bodi { /* Estiliza o corpo da página */
+    font-family: sans-serif; /* Define a fonte padrão */
+    background-image: var(--bgGradient); /* Aplica o gradiente dinâmico */
+    color: var(--fontColor1); /* Aplica a cor de texto padrão */
+    transition:  color 0.3s ease; /* Transição suave na cor */
+}
+#main { /* Container principal da página */
+    width: 100%; /* Ocupa toda a largura disponível */
+}
+
+.topo { /* Estiliza o cabeçalho */
+    background-color: var(--menuColor); /* Cor de fundo dinâmica do menu */
+    display: flex; /* Ativa o modelo flexbox */
+    align-items: center; /* Alinha os itens verticalmente ao centro */
+    padding: 10px; /* Adiciona espaçamento interno */
+    transition: background-color 0.3s ease; /* Transição suave na cor de fundo */
+}
+
+#logo img { /* Estiliza a imagem do logotipo */
+    height: 50px; /* Define a altura fixa */
+}
+
+#busca { /* Container da barra de busca */
+    flex-grow: 1; /* Faz o elemento ocupar o espaço disponível */
+    margin: 0 20px; /* Adiciona margem nas laterais */
+}
+
+#busca-input { /* Campo de texto da busca */
+    width: 50%; /* Largura parcial */
+    padding: 10px; /* Espaçamento interno */
+    margin-left: 100px; /* Margem à esquerda */
+    border: 1px solid #ccc; /* Borda cinza clara */
+    border-radius: 5px; /* Arredonda as bordas */
+    background-color: #fff; /* Fundo branco */
+    color: #333; /* Cor do texto digitado */
+}
+
+#menu a { /* Links dentro do menu de navegação */
+    text-decoration: none; /* Remove o sublinhado do link */
+    margin: 0 10px; /* Espaçamento lateral */
+    color: var(--fontColor1); /* Cor dinâmica do texto */
+}
+
+#menu img { /* Imagens dentro do menu */
+    height: 30px; /* Define a altura fixa */
+}
+
+#banner img { /* Imagem do banner principal */
+    width: 100%;    /* Largura total */
+    height: 300px; /* Altura fixa */
+    object-fit: cover; /* Cobre o espaço sem distorcer */
+}
+
+#menu { /* Bloco do menu de navegação */
+    display: flex; /* Ativa flexbox */
+    align-items: center; /* Alinha verticalmente ao centro */
+    gap: 15px; /* Espaço uniforme entre os itens */
+}
+
+.theme{ /* Container do seletor de tema */
+    display: inline-flex; /* Flexbox inline */
+    align-items: center; /* Alinha ao centro */
+}
+
+.check { /* Caixa de seleção (checkbox) */
+    display: none; /* Esconde o elemento original */
+}
+
+.theme-label { /* Rótulo/ícone do botão de tema */
+    cursor: pointer; /* Muda o cursor para o formato de clique */
+    font-size: 20px; /* Tamanho do ícone */
+    user-select: none; /* Impede a seleção do texto/emoji */
+    margin: 0; /* Remove margens */
+}
+
+#cardis { /* Container da seção de cards */
+    width: 90%; /* Largura de 90% da tela */
+    display: flex; /* Ativa flexbox */
+    justify-content: center; /* Centraliza os cards */
+    gap: 20px; /* Espaço entre os cards */
+    padding: 20px; /* Espaçamento interno */
+    margin-top: 40px; /* Margem superior */
+    margin-left: auto; /* Centraliza à esquerda */
+    margin-right: auto; /* Centraliza à direita */
+    flex-wrap: wrap; /* Permite quebrar linha se necessário */
+    margin-bottom: 200px; /* Margem inferior grande */
+}
+
+.card { /* Cada card individual */
+    width: 10%; /* Largura base */
+    min-width: 200px; /* Largura mínima de segurança */
+    height: auto; /* Altura automática */
+    background-color: var(--cardBg); /* Fundo dinâmico do card */
+    border: 1px solid var(--cardBorder); /* Borda dinâmica */
+    border-radius: 8px; /* Arredonda as bordas */
+    padding: 15px; /* Espaçamento interno */
+    margin: 10px; /* Margem externa */
+    text-align: center; /* Centraliza o conteúdo */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Sombra sutil */
+    display: flex; /* Ativa flexbox */
+    flex-direction: column; /* Organiza os itens em coluna */
+    justify-content: space-between; /* Distribui os itens uniformemente */
+    transition: background-color 0.3s ease, border-color 0.3s ease; /* Transições suaves */
+}
+
+.card img { /* Imagem interna do card */
+    width: 80%; /* Ocupa 80% da largura do card */
+    max-height: 150px; /* Altura máxima */
+    object-fit: contain; /* Ajusta a imagem proporcionalmente */
+    margin: 10px auto; /* Centraliza a imagem */
+}
+
+.card buttons { /* Botão dentro do card */
+    margin-top: 15px; /* Margem superior */
+    margin-left: 10px; /* Margem à esquerda */
+    width: 80%; /* Largura de 80% */
+    padding: 8px 15px; /* Espaçamento interno */
+    color: var(--btnColor); /* Cor do texto dinâmica */
+    font-size: 14px; /* Tamanho da fonte */
+    border: none; /* Remove a borda padrão */
+    background: var(--btnBg); /* Fundo dinâmico */
+    border-radius: 20px; /* Arredonda as bordas em formato pílula */
+    cursor: pointer; /* Cursor de clique */
+    transition: opacity 0.3s ease; /* Transição suave na opacidade */
+}
+
+.card button:hover { /* Efeito ao passar o mouse no botão */
+    opacity: 0.85; /* Reduz levemente a opacidade */
+}
+
+.card p { /* Título/parágrafo do card */
+    font-size: 16px; /* Tamanho da fonte */
+    font-weight: bold; /* Deixa o texto em negrito */
+    margin-bottom: 5px; /* Margem inferior */
+    color: var(--fontColor1); /* Cor dinâmica */
+}
+
+.card span.texto { /* Descrição secundária do card */
+    font-size: 14px; /* Tamanho da fonte */
+    color: var(--fontColor2); /* Cor dinâmica secundária */
+    display: block; /* Comportamento de bloco */
+    margin-bottom: 10px; /* Margem inferior */
+}
+
+foter { /* Rodapé da página */
+    text-align: center; /* Centraliza o texto */
+    padding: 20px; /* Espaçamento interno */
+    margin-top: 20%; /* Distância grande do topo */
+    background-color: var(--menuColor); /* Fundo dinâmico */
+    color: var(--fontColor1); /* Cor de texto dinâmica */
+    transition: background-color 0.3s ease, color 0.3s ease; /* Transições suaves */
+}
+
+/* ==========================================
+   MEDIA QUERIES (Responsividade para Celulares)
+   ========================================== */
+@media (max-width: 768px) { /* Executado em telas menores que 768px */
+    #topo {
+        flex-direction: column; /* Muda o menu para layout em coluna */
+        align-items: stretch; /* Estica os itens */
+        gap: 10px; /* Espaçamento entre os elementos */
+    }
+
+    #busca {
+        width: 100%; /* Ocupa toda a largura */
+        margin: 0; /* Remove margens */
+    }
+
+    #menu {
+        justify-content: space-around; /* Espaça uniformemente os itens do menu */
+        width: 100%; /* Ocupa toda a largura */
+    }
+
+    .card {
+        width: 45%; /* Cada card ocupa quase metade da tela */
+        max-width: none; /* Remove limite máximo */
+    }
+}
+
+@media (max-width: 480px) { /* Executado em telas menores que 480px */
+    .card {
+        width: 100%; /* Cada card ocupa a largura total da tela */
+    }
+    
+    #menu a {
+        font-size: 12px; /* Reduz o tamanho da fonte dos links do menu */
+    }
+}
