@@ -101,7 +101,7 @@ body { /* Estiliza o corpo da página */
     margin: 0; /* Remove margens */
 }
 
-#cardis { /* Container da seção de cards */
+#cards { /* Container da seção de cards */
     width: 90%; /* Largura de 90% da tela */
     display: flex; /* Ativa flexbox */
     justify-content: center; /* Centraliza os cards */
