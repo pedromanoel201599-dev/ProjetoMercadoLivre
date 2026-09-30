@@ -138,7 +138,7 @@ body { /* Estiliza o corpo da página */
     margin: 10px auto; /* Centraliza a imagem */
 }
 
-.card buttons { /* Botão dentro do card */
+.card button { /* Botão dentro do card */
     margin-top: 15px; /* Margem superior */
     margin-left: 10px; /* Margem à esquerda */
     width: 80%; /* Largura de 80% */
