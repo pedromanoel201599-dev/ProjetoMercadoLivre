@@ -36,7 +36,7 @@ body { /* Estiliza o corpo da página */
     width: 100%; /* Ocupa toda a largura disponível */
 }
 
-.topo { /* Estiliza o cabeçalho */
+#topo { /* Estiliza o cabeçalho */
     background-color: var(--menuColor); /* Cor de fundo dinâmica do menu */
     display: flex; /* Ativa o modelo flexbox */
     align-items: center; /* Alinha os itens verticalmente ao centro */
