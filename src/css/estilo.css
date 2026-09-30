@@ -26,7 +26,7 @@
     box-sizing: border-box; /* Inclui borda e padding no cálculo do tamanho */
 }
 
-bodi { /* Estiliza o corpo da página */
+body { /* Estiliza o corpo da página */
     font-family: sans-serif; /* Define a fonte padrão */
     background-image: var(--bgGradient); /* Aplica o gradiente dinâmico */
     color: var(--fontColor1); /* Aplica a cor de texto padrão */
